@@ -1,11 +1,11 @@
 FROM ann-benchmarks
 
-RUN apt-get update
-RUN apt-get install -y git cmake g++ python3 python3-setuptools python3-pip
-RUN pip3 install wheel pybind11
-RUN git clone https://gitee.com/zivChen/qbg-test.git
+RUN apt update
+RUN apt install -y git cmake g++ python3 python3-setuptools python3-pip libblas-dev liblapack-dev
+RUN pip3 install wheel pybind11==2.5.0
+RUN git clone -b main https://gitee.com/zivChen/qbg-test.git
 RUN mkdir -p qbg-test/build
-RUN cd qbg-test/build && cmake ..
+RUN cd qbg-test/build && cmake -DNGTQG_NO_ROTATION=ON -DNGTQG_ZERO_GLOBAL=ON ..
 RUN cd qbg-test/build && make && make install
 RUN ldconfig
 RUN cd qbg-test/python && python3 setup.py bdist_wheel
