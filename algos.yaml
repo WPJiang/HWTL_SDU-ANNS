@@ -505,7 +505,7 @@ float:
               ],
             ]
     NGT-qsg:
-      docker-tag: ann-benchmarks-ngt
+      docker-tag: ann-benchmarks-qsgngt
       module: ann_benchmarks.algorithms.qsg_ngt
       constructor: QSG
       base-args: ["@metric", "Float", 0.1]
