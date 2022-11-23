@@ -1,0 +1,16 @@
+FROM quay.io/centos/centos:stream8
+
+RUN dnf -y install epel-release && \
+    dnf -y install gcc make git python3-devel && \
+    python3 -m pip install --upgrade pip setuptools wheel && \
+    dnf -y copr enable @vespa/vespa centos-stream-8 && \
+    dnf -y install vespa-ann-benchmark
+
+WORKDIR /home/app
+
+COPY requirements.txt run_algorithm.py ./
+
+RUN python3 -m pip install -r requirements.txt && \
+    python3 -m pip install /opt/vespa/libexec/vespa_ann_benchmark
+
+ENTRYPOINT ["python3", "-u", "run_algorithm.py"]
