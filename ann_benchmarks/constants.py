@@ -1,1 +1,0 @@
-INDEX_DIR = 'indices'
