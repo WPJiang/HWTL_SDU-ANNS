@@ -4,8 +4,6 @@
 
 #### Nearest neighbor retrieval algorithm qsgngt, based on NGT-qg、Efanna、SSG, providing Python API
 
----
-
 # Install & Usage
 
 ## 1. **Installation**
