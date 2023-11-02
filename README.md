@@ -303,6 +303,8 @@ for v in Y:
 
 ## 3. **Team members**
 The team members come from HWTL and SDU. 
+
 HWTL: Weipeng Jiang, Wei Han, Bo Bai
+
 SDU: Kun Wang, Zixu Li, Zhiwei Chen, Shanzhi Li, Yupeng Hu, Liqiang Nie
 
