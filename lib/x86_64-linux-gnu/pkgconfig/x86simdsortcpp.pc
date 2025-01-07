@@ -1,0 +1,9 @@
+prefix=/usr/local
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include
+
+Name: libx86simdsortcpp
+Description: C++ template library for high performance SIMD based sorting routines.
+Version: 4.0
+Libs: -L${libdir} -lx86simdsortcpp
+Cflags: -I${includedir}
